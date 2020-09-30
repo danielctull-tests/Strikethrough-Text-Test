@@ -9,11 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet private var label: UILabel? {
+        didSet {
+            label?.attributedText = NSAttributedString(
+                string: "Hello World!",
+                attributes: [.strikethroughStyle: NSUnderlineStyle.single.rawValue])
+        }
     }
-
-
 }
-
